@@ -1,0 +1,29 @@
+{
+  "name": "apiratioeducation",
+  "version": "1.0.0",
+  "description": "REst api project",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "set NODE_OPTIONS=--experimental-vm-modules &&jest --detectOpenHandles"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alejandrozeb/ApiRatioEducation.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alejandrozeb/ApiRatioEducation/issues"
+  },
+  "homepage": "https://github.com/alejandrozeb/ApiRatioEducation#readme",
+  "dependencies": {
+    "express": "^4.17.2",
+    "mongoose": "^6.1.10"
+  },
+  "devDependencies": {
+    "jest": "^27.4.7",
+    "nodemon": "^2.0.15",
+    "supertest": "^6.2.2"
+  }
+}
