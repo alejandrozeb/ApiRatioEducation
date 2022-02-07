@@ -1,6 +1,8 @@
 import app from "../src/app";
 import request  from "supertest";
 
+import controllers from "../src/controllers/index"; 
+
 describe("GET /Ping", () =>{
     test( "Test ping", async () =>{
         const response = await request(app).get("/ping").send();
@@ -17,5 +19,9 @@ describe("Get /country",() =>{
     test("Should respond with data", async()=>{
         const response = await request(app).get("/country").send();
         expect(response.body).toBeDefined();
+    });
+
+    test("Should be in a controller", async()=>{
+        expect(controllers).toBeDefined();
     });
 });
