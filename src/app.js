@@ -8,7 +8,13 @@ app.get("/ping", (req, res) => {
 });
 
 app.get("/country", (req,res) =>{
-    res.json([]);
+  let countries = {
+    "country": "Afghanistan",
+    "year": 1969,
+    "ratio": 15.4
+  };
+  let result = JSON.stringify(countries);
+  return res.send(result);
 });
 
 export default app;

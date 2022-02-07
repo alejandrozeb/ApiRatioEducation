@@ -14,8 +14,8 @@ describe("Get /country",() =>{
         expect(response.statusCode).toBe(200);
     });
 
-    test("Should respond with a json", async()=>{
+    test("Should respond with data", async()=>{
         const response = await request(app).get("/country").send();
-        expect(response.body).toBeInstanceOf(Array);
+        expect(response.body).toBeDefined();
     });
 });
