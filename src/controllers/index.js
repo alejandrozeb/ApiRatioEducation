@@ -1,5 +1,8 @@
+import CountriesController from "./CountriesController";
 const Controllers = {
-    CountriesController: ""
+    CountriesController
 }
+
+
 
 export default Controllers; 

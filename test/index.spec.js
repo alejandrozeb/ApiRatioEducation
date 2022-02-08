@@ -22,6 +22,13 @@ describe("Get /country",() =>{
     });
 
     test("Should be in a controller", async()=>{
-        expect(controllers).toBeDefined();
+        expect(controllers.CountriesController).toBeDefined();
+    });
+});
+
+describe("Country Controllers",()=>{
+    test("Should return all countries data ", ()=>{
+        let countries = controllers.CountriesController.allCountries();
+        expect(countries).toBeDefined();
     });
 });
