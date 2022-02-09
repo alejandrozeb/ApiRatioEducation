@@ -2,6 +2,7 @@ import app from "../src/app";
 import request  from "supertest";
 
 import controllers from "../src/controllers/index"; 
+import Services from "../src/services/index";
 
 describe("GET /Ping", () =>{
     test( "Test ping", async () =>{
@@ -26,9 +27,24 @@ describe("Get /country",() =>{
     });
 });
 
-describe("Country Controllers",()=>{
+describe("Country Controller",()=>{
     test("Should return all countries data ", ()=>{
         let countries = controllers.CountriesController.allCountries();
         expect(countries).toBeDefined();
+    });
+});
+
+describe("Country service",()=>{
+    test("Should exits a service", () =>{
+        let countries = Services.CountriesService.getAllCountries();
+        expect(countries).toBeDefined();
+    });
+
+    test("Should return countries data", () => {
+        let countries = Services.CountriesService.getAllCountries();
+
+        expect(countries).toHaveProperty('country');
+        expect(countries).toHaveProperty('year');
+        expect(countries).toHaveProperty('ratio');
     });
 });
