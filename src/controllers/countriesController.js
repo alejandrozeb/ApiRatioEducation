@@ -1,11 +1,8 @@
+import Services from "../services/index"
+
 let CountriesController = {}
 CountriesController.allCountries = () =>{
-    let countries = {
-        "country": "Afghanistan",
-        "year": 1969,
-        "ratio": 15.4
-      };
-    
+    let countries = Services.CountriesService.getAllCountries();
     return countries;
 }
 
