@@ -1,30 +1,35 @@
 {
   "name": "apiratioeducation",
   "version": "1.0.0",
-  "description": "REst api project",
+  "description": "",
   "main": "index.js",
-  "type": "module",
+  "directories": {
+    "test": "test"
+  },
   "scripts": {
     "start": "node index.js",
-    "test": "set NODE_OPTIONS=--experimental-vm-modules &&jest --detectOpenHandles"
+    "test": "jest --detectOpenHandles"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/alejandrozeb/ApiRatioEducation.git"
   },
-  "author": "",
-  "license": "ISC",
+  "keywords": [
+    "JS",
+    "API",
+    "Education"
+  ],
+  "author": "Alejandro Zeballos",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/alejandrozeb/ApiRatioEducation/issues"
   },
   "homepage": "https://github.com/alejandrozeb/ApiRatioEducation#readme",
   "dependencies": {
-    "express": "^4.17.2",
-    "mongoose": "^6.2.0"
+    "express": "^4.17.2"
   },
   "devDependencies": {
-    "jest": "^27.4.7",
-    "nodemon": "^2.0.15",
+    "jest": "^27.5.1",
     "supertest": "^6.2.2"
   }
 }
