@@ -1,8 +1,4 @@
-const express = require("express");
-const config =  require("./src/server/config.js");
-
-
-const app = config(express());
+const app = require("./src/server/config");
 
 
 app.listen(3000,()=>{

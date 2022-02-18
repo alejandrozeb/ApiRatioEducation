@@ -1,5 +1,4 @@
-const app = require("../index");
-
+const app = require("../src/server/config");
 const request = require("supertest");
 
 describe("GET /Ping", () =>{

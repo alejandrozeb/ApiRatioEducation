@@ -1,13 +1,12 @@
 const express = require("express");
 //import Controllers from "../src/controllers/index";
 const routes = require("../routes/index");
+const app = express();
 
-module.exports = app =>{
-  app.use(express.urlencoded({extended:false}));
-  app.use(express.json());
+app.use(express.urlencoded({extended:false}));
+app.use(express.json());
 
-  routes(app);
+routes(app);
 
-  return app;
-}
+module.exports =  app;
 
