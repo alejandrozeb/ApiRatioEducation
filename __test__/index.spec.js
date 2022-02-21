@@ -3,7 +3,6 @@ const request = require("supertest");
 
 describe("GET /Ping", () =>{
     test( "Test ping", async () =>{
-        console.log(app);
         const response = await request(app).get("/home").send();
         expect(response.statusCode).toBe(200);    
     });
