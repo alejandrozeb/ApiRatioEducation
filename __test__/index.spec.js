@@ -1,12 +1,18 @@
 const app = require("../src/server/config");
 const request = require("supertest");
 
-describe("GET /Ping", () =>{
-    test( "Test ping", async () =>{
+describe("Test server with get", () =>{
+    test( "Testing 200 code ", async () =>{
         const response = await request(app).get("/home").send();
         expect(response.statusCode).toBe(200);    
     });
+
+    test( "Testing 500 code", async () =>{
+        const response = await request(app).get("/unknown").send();
+        expect(response.statusCode).toBe(404);    
+    });
 });
+
 
 /* describe("Get /country",() =>{
     test("Should respond with a 200 status code", async()=>{
