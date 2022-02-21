@@ -2,12 +2,12 @@ const app = require("../src/server/config");
 const request = require("supertest");
 
 describe("Test server with get", () =>{
-    test( "Testing 200 code ", async () =>{
+    test( "Should return 200 code ", async () =>{
         const response = await request(app).get("/home").send();
         expect(response.statusCode).toBe(200);    
     });
 
-    test( "Testing 500 code", async () =>{
+    test( "Should return 404 code", async () =>{
         const response = await request(app).get("/unknown").send();
         expect(response.statusCode).toBe(404);    
     });
