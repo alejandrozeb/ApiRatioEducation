@@ -8,9 +8,18 @@ describe('Testing endpoints for /country/', () => {
         expect(response.statusCode).toBe(200);   
     });
 
-    test('country/all endpoint should return Data ',async ()=>{
+    test('country/all endpoint should return Json type ',async ()=>{
         const response = await request(app).get("/country/all").send();
-        expect(response.body).toBeInstanceOf(Object);
+        expect(response.headers['content-type']).toEqual(expect.stringContaining("json"));
     });
 
+    test('country/all endpoint should return a JSON with countries ', async ()=>{
+        const countries = {"Country": "Bolivia"};
+        const response = await request(app).get("/country/all").send();
+        expect(response.body).toEqual(countries);
+    });
+
+    test('country/all endpoint should call a service', ()=>{
+
+    });
 });
