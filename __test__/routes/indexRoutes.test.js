@@ -5,4 +5,8 @@ describe("testing Routes objects", ()=>{
         const homeRoute = routes.HomeRoute;
         expect(homeRoute).toBeDefined();
     });
+    test("/Country route should be defined ", ()=>{
+        const homeRoute = routes.CountryRoute;
+        expect(homeRoute).toBeDefined();
+    });
 });
