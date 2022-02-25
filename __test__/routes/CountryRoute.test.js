@@ -1,4 +1,5 @@
 const countryRoutes = require('../../src/routes/CountryRoute');
+const services = require('../../src/services/index');
 const app = require("../../src/server/config");
 const request = require("supertest");
 
@@ -20,6 +21,7 @@ describe('Testing endpoints for /country/', () => {
     });
 
     test('country/all endpoint should call a service', ()=>{
-
+        const countryService = services.countryService();
+        expect(countryService).toHaveBeenCalled();
     });
 });

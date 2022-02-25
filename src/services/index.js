@@ -1,8 +1,3 @@
-import CountriesService from "./countriesService";
-const Services = {
-    CountriesService
+module.exports = {
+    
 }
-
-
-
-export default Services; 
