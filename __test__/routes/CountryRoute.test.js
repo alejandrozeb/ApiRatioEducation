@@ -9,19 +9,19 @@ describe('Testing endpoints for /country/', () => {
         expect(response.statusCode).toBe(200);   
     });
 
-    test('country/all endpoint should return Json type ',async ()=>{
+    test('/all endpoint should return Json type ',async ()=>{
         const response = await request(app).get("/country/all").send();
         expect(response.headers['content-type']).toEqual(expect.stringContaining("json"));
     });
 
     test('country/all endpoint should return a JSON with countries ', async ()=>{
-        const countries = {"Country": "Bolivia"};
+        const countries = {"Countries": "Bolivia"};
         const response = await request(app).get("/country/all").send();
         expect(response.body).toEqual(countries);
     });
 
-    test('country/all endpoint should call a service', ()=>{
-        const countryService = services.countryService();
-        expect(countryService).toHaveBeenCalled();
+    test('/all endpoint should call a service', ()=>{
+        const countryService = services.CountryService;
+        expect(countryService).toBeDefined();
     });
 });
