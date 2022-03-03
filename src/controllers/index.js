@@ -1,9 +1,3 @@
-import CountriesController from "./CountriesController";
-const Controllers = {
-    CountriesController
+module.exports = {
+    countryController : require('./countriesController'),
 }
-
-
-
-export default Controllers; 
-

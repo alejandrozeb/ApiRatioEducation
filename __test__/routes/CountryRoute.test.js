@@ -19,9 +19,4 @@ describe('Testing endpoints for /country/', () => {
         const response = await request(app).get("/country/all").send();
         expect(response.body).toEqual(countries);
     });
-
-    test('/all endpoint should call a service', ()=>{
-        const countryService = services.CountryService;
-        expect(countryService).toBeDefined();
-    });
 });

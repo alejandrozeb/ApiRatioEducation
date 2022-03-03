@@ -1,9 +1,8 @@
-import Services from "../services/index"
+class CountryController{}
 
-let CountriesController = {}
-CountriesController.allCountries = () =>{
-    let countries = Services.CountriesService.getAllCountries();
-    return countries;
+CountryController.allCountries = () =>{
+    return 'hi';
 }
 
-export default CountriesController;
+
+module.exports = CountryController;
