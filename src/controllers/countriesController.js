@@ -1,7 +1,7 @@
 class CountryController{}
 
-CountryController.allCountries = () =>{
-    return 'hi';
+CountryController.allCountries = (req,res)=>{
+    res.json({"Countries": "Bolivia" })
 }
 
 
