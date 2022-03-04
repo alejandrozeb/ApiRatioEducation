@@ -1,5 +1,5 @@
 class CountryService{
-  getAllCountries(){
+  static getAllCountries(){
     return 'data';
   }
 }
