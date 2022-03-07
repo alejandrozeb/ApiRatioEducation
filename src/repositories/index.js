@@ -1,3 +1,3 @@
 module.exports = {
-    countryRepository : require('./countryRepository'),
+    countryRepository : require('./countryRepository.js'),
 }
