@@ -1,8 +1,8 @@
-const model = require('../../src/models/index');
+const countryModel = require('../../src/models/countryModel');
 
 describe('Country Model', ()=>{
     test('class should be defined',() => {
-        const countryModel = model.Country;
-        expect(countryModel).toBeDefined();
+        const countryModelTest = new countryModel();
+        expect(countryModelTest).toBeDefined();
     });
 });
