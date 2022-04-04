@@ -10,4 +10,8 @@ const sequelize = new Sequelize({
   port: parseInt(PORT,10), 
 });
 
-module.exports = sequelize;
+const db = {};
+db.Sequelize = Sequelize;
+db.sequelize = sequelize;
+
+module.exports = db;
