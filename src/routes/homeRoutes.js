@@ -1,6 +1,6 @@
 const {Router}= require("express");
 const router = Router();
-const db = require("../models/index");
+const db = require("../database/config");
 
 router.get("/", (req,res)=>{
     db.CountryModel.findAll()

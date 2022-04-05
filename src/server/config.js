@@ -1,7 +1,7 @@
 const express = require("express");
 //import Controllers from "../src/controllers/index";
 const routes = require("../routes/index");
-const db = require("../models/index");
+const db = require("../database/config");
 
 const app = express();
 

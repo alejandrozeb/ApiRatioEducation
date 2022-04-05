@@ -1,5 +1,5 @@
 const { Sequelize } = require('sequelize');
-const {USER, PASSWORD, DBNAME, HOST, PORT} = require('../database/variablesEnv');
+const {USER, PASSWORD, DBNAME, HOST, PORT} = require('./variablesEnv');
 const dataModel = require('../models/dataModel');
 const countryModel = require('../models/countryModel');
 
