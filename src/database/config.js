@@ -1,5 +1,5 @@
 const { Sequelize } = require('sequelize');
-const {USER, PASSWORD, DBNAME, HOST, PORT} = require('./variablesEnv');
+const {USER, PASSWORD, DBNAME, HOST, PORT, LOGGING} = require('./variablesEnv');
 const dataModel = require('../models/dataModel');
 const countryModel = require('../models/countryModel');
 
@@ -10,6 +10,7 @@ const sequelize = new Sequelize({
   host: HOST,
   dialect: 'postgres',
   port: parseInt(PORT,10), 
+  logging: LOGGING
 });
 
 const db = {};
