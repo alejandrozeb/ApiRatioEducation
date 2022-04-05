@@ -6,4 +6,5 @@ module.exports = {
     DBNAME: process.env.DBNAME,
     USER: process.env.USER,
     PASSWORD: process.env.PASSWORD,
+    LOGGING: false
 };
