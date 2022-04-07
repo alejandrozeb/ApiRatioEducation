@@ -10,4 +10,14 @@ describe('DataBase config', ()=>{
         const dbTest = dbConfig;
         expect(dbTest.Sequelize).toBeDefined();
     });
+
+    test('DataModel atribute should be defined',() => {
+        const dbTest = dbConfig;
+        expect(dbTest.DataModel).toBeDefined();
+    });
+
+    test('CountryModel atribute should be defined',() => {
+        const dbTest = dbConfig;
+        expect(dbTest.CountryModel).toBeDefined();
+    });
 });
