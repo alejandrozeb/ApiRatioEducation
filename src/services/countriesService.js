@@ -1,6 +1,10 @@
+const Repositories = require('../repositories/index');
+
 class CountryService{
   static getAllCountries(){
-    return 'data';
+    let dataCountries = Repositories.countryRepository.getAll();
+    let dataCountriesArray = [];
+    return dataCountriesArray;
   }
 }
 
